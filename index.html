@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pierre — Finanças simples</title>
+    <meta name="description" content="App financeiro minimalista: controle gastos, defina orçamentos e receba alertas inteligentes. Instale como PWA no iPhone." />
+    <meta name="author" content="Pierre Finance" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#121110" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f8f5ee" media="(prefers-color-scheme: light)" />
+
+    <!-- iOS PWA -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Pierre" />
+    <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+
+    <!-- PWA manifest -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <meta property="og:title" content="Pierre — Finanças simples" />
+    <meta property="og:description" content="Controle de gastos minimalista com alertas inteligentes." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/icons/icon-512.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
