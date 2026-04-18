@@ -1,6 +1,6 @@
-// Pierre Finance — minimal offline-capable service worker
+// Metric — minimal offline-capable service worker
 // Cache-first for app shell, network-first for navigation.
-const CACHE = "pierre-v1";
+const CACHE = "metric-v1";
 const ASSETS = ["/", "/manifest.webmanifest", "/icons/icon-192.png", "/icons/icon-512.png"];
 
 self.addEventListener("install", (event) => {

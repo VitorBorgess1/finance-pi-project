@@ -31,12 +31,14 @@ const DrawerContent = React.forwardRef<
     <DrawerPrimitive.Content
       ref={ref}
       className={cn(
-        "fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col rounded-t-[10px] border bg-background",
+        // Arredondamento aumentado para rounded-t-3xl para visual nativo de iOS
+        "fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col rounded-t-3xl border bg-background",
         className,
       )}
       {...props}
     >
-      <div className="mx-auto mt-4 h-2 w-[100px] rounded-full bg-muted" />
+      {/* Handle (tracinho) reduzido e refinado ao padrão Apple */}
+      <div className="mx-auto mt-4 h-1.5 w-12 rounded-full bg-muted" />
       {children}
     </DrawerPrimitive.Content>
   </DrawerPortal>
@@ -49,7 +51,8 @@ const DrawerHeader = ({ className, ...props }: React.HTMLAttributes<HTMLDivEleme
 DrawerHeader.displayName = "DrawerHeader";
 
 const DrawerFooter = ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) => (
-  <div className={cn("mt-auto flex flex-col gap-2 p-4", className)} {...props} />
+  // Adicionado padding-bottom extra para respeitar a safe-area do iPhone
+  <div className={cn("mt-auto flex flex-col gap-2 p-4 pb-[calc(env(safe-area-inset-bottom)+1rem)]", className)} {...props} />
 );
 DrawerFooter.displayName = "DrawerFooter";
 
